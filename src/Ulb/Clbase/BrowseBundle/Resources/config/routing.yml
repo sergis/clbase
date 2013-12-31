@@ -1,0 +1,7 @@
+ulb_clbase_browse_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: UlbClbaseBrowseBundle:Default:index, name:'Serge' }
+
+info:
+    resource: "@UlbClbaseBrowseBundle/Controller/CustomerController.php"
+    type: annotation

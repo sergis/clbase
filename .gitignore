@@ -1,0 +1,15 @@
+/web/bundles/acmedemo
+/web/bundles/framework
+/web/bundles/sensiodistribution
+/app/bootstrap*
+/app/cache/*
+/app/config/parameters.yml
+/app/logs/*
+!app/cache/.gitkeep
+!app/logs/.gitkeep
+!/build/
+/vendor/
+/bin/
+/src/Acme/
+/baseCSV/
+/composer.phar

@@ -1,0 +1,33 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      
+        <h1>Приветствуем Вас в &laquo;Улыбкино&raquo;!</h1>
+        <p>Это сайт только для внутреннего использования. Пожалуйста, перейдите на основной сайт, если Вы не являетесь сотрудником ООО &laquo;Улыбкино&raquo;.</p>
+        <p><a class="btn btn-primary btn-lg" href="www.ulybkino.ru" >Перейти на сайт &laquo;Улыбкино&raquo;</a></p>
+      
+    </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>База потенциальных Клиентов</h2>
+          <p>Доступен просмотр списка,  добавление, изменение и удаление записей о клиентах.
+          </p> 
+          <p>ToDo: листалка, сортировки, отборы, сегментация клиентов метками</p>
+          <p><a class="btn btn-default" href="{{ path('customer') }}">Смотреть &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Копилка идей для новых разработок</h2>
+          <p>Приветствуем все идеи по улучшению функционала магазина, контента сайта </p>
+          <p><a class="btn btn-default" href="#">Подробнее &raquo;</a></p>
+       </div>
+        <div class="col-lg-4">
+          <h2>Работа над ошибками</h2>
+          <p>Пожалуйста, оставьте сообщение об обнаруженной проблеме или ошибке в программном обеспечении. Все тикеты будут обработаны. </p>
+          <p><a class="btn btn-default" href="#">Подробнее &raquo;</a></p>
+        </div>
+      </div>
+
+{% endblock %}

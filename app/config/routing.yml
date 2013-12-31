@@ -1,0 +1,4 @@
+ulb_clbase_browse:
+    resource: "@UlbClbaseBrowseBundle/Resources/config/routing.yml"
+    prefix:   /
+

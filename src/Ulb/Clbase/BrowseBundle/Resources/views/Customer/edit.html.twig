@@ -1,0 +1,80 @@
+{#  src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/edit.html.twig  #}
+{% extends '::base.html.twig' %}
+{% form_theme edit_form 'UlbClbaseBrowseBundle:Form:fields.html.twig'   %}
+
+{% block body %}
+    <h1>Изменение данных о Клиенте</h1>
+    {{ form_start(edit_form) }}
+        <div>
+	    {{ form_label(edit_form.firstName) }}
+	    {{ form_errors(edit_form.firstName) }} 
+	    {{ form_widget(edit_form.firstName) }}
+	    </div>
+		   <div>
+                <th>Имя</th>
+                <td>{{ entity.firstName }}</td>
+            </div>
+            <div>
+                <th>Фамилия</th>
+                <td>{{ entity.lastName }}</td>
+            </div>
+            <div>
+                <th>Email</th>
+                <td>{{ entity.email }}</td>
+            </div>
+            <div>
+                <th>Телефон</th>
+                <td>{{ entity.tel }}</td>
+            </div>
+            <div>
+                <th>Регион</th>
+                <td>{{ entity.mainCity }}</td>
+            </div>
+            <div>
+                <th>Город</th>
+                <td>{{ entity.town }}</td>
+            </div>
+            <div>
+                <th>Улица</th>
+                <td>{{ entity.street }}</td>
+            </div>
+            <div>
+                <th>Дом №</th>
+                <td>{{ entity.houseNum }}</td>
+            </div>
+            <div>
+                <th>Корп.</th>
+                <td>{{ entity.blockNum }}</td>
+            </div>
+            <div>
+                <th>Стр.</th>
+                <td>{{ entity.buildNum }}</td>
+            </div>
+            <div>
+                <th>Подъезд</th>
+                <td>{{ entity.porch }}</td>
+            </div>
+            <div>
+                <th>Этаж</th>
+                <td>{{ entity.floor }}</td>
+            </div>
+            <div>
+                <th>Квартира</th>
+                <td>{{ entity.flat }}</td>
+            </div>
+
+
+    {{ form_rest(edit_form) }}
+
+
+	<a class="btn btn-default" role="button" href="{{ path('customer') }}">
+	   Назад к списку
+	</a>
+	{# form(delete_form) #}
+	{{ form_label(delete_form) }}
+    {{ form_errors(delete_form) }} 
+    {{ form_widget(delete_form) }}
+
+
+	
+{% endblock %}

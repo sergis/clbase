@@ -1,0 +1,81 @@
+{#  src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/show.html.twig  #}
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+<h1>Данные о Клиенте</h1>
+<div class="table-responsive">
+    <table class="table"><!--"record_properties"-->
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Имя</th>
+                <td>{{ entity.firstName }}</td>
+            </tr>
+            <tr>
+                <th>Фамилия</th>
+                <td>{{ entity.lastName }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th>Телефон</th>
+                <td>{{ entity.tel }}</td>
+            </tr>
+            <tr>
+                <th>Регион</th>
+                <td>{{ entity.mainCity }}</td>
+            </tr>
+            <tr>
+                <th>Город</th>
+                <td>{{ entity.town }}</td>
+            </tr>
+            <tr>
+                <th>Улица</th>
+                <td>{{ entity.street }}</td>
+            </tr>
+            <tr>
+                <th>Дом №</th>
+                <td>{{ entity.houseNum }}</td>
+            </tr>
+            <tr>
+                <th>Корп.</th>
+                <td>{{ entity.blockNum }}</td>
+            </tr>
+            <tr>
+                <th>Стр.</th>
+                <td>{{ entity.buildNum }}</td>
+            </tr>
+            <tr>
+                <th>Подъезд</th>
+                <td>{{ entity.porch }}</td>
+            </tr>
+            <tr>
+                <th>Этаж</th>
+                <td>{{ entity.floor }}</td>
+            </tr>
+            <tr>
+                <th>Квартира</th>
+                <td>{{ entity.flat }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <!--ul class="record_actions btn-group">
+        <li -->
+            <a class="btn btn-default" role="button" href="{{ path('customer') }}">
+                    Назад к списку
+            </a>
+        <!--/li>
+        <li!-->
+            <a class="btn btn-default" role="button" href="{{ path('customer_edit', { 'id': entity.id }) }}">
+                Изменить
+            </a>
+        <!--/li>
+        <li!--><button>{{ form(delete_form) }}</button><!--/li>
+    </ul!-->
+{% endblock %}

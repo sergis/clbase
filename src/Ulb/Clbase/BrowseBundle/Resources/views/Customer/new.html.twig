@@ -1,0 +1,14 @@
+{#  src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/new.html.twig  #}
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Новый Клиент</h1>
+
+    {{ form(form) }}
+
+
+    <a class="btn btn-default" role="button" href="{{ path('customer') }}">
+        Назад к списку
+    </a>
+
+{% endblock %}
