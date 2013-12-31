@@ -65,17 +65,17 @@
         </tbody>
     </table>
 </div>
-    <!--ul class="record_actions btn-group">
-        <li -->
-            <a class="btn btn-default" role="button" href="{{ path('customer') }}">
-                    Назад к списку
-            </a>
-        <!--/li>
-        <li!-->
-            <a class="btn btn-default" role="button" href="{{ path('customer_edit', { 'id': entity.id }) }}">
-                Изменить
-            </a>
-        <!--/li>
-        <li!--><button>{{ form(delete_form) }}</button><!--/li>
-    </ul!-->
+<div>
+    <a class="btn btn-default" role="button" href="{{ path('customer') }}">
+        Назад к списку
+    </a>
+
+    <a class="btn btn-success" role="button" href="{{ path('customer_edit', { 'id': entity.id }) }}">
+        Изменить
+    </a>
+    {# form(delete_form) #}
+    {{ form_start(delete_form, { 'attr': {'class': 'form-inline'} }) }}          
+    {{ form_widget(delete_form, { 'attr': {'class': 'btn btn-danger'} }) }}
+    {{ form_end(delete_form) }} 
+</div>
 {% endblock %}

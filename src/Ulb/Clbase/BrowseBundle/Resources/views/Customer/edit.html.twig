@@ -4,77 +4,82 @@
 
 {% block body %}
     <h1>Изменение данных о Клиенте</h1>
-    {{ form_start(edit_form) }}
-        <div>
+    {{ form_start(edit_form, { 'attr': {'class': 'form-horizontal'} }) }}
+        <div class="form-group">
 	    {{ form_label(edit_form.firstName) }}
 	    {{ form_errors(edit_form.firstName) }} 
 	    {{ form_widget(edit_form.firstName) }}
-	    </div>
-		   <div>
-                <th>Имя</th>
-                <td>{{ entity.firstName }}</td>
+
+                {{ form_label (edit_form.lastName) }} 
+                {{ form_errors(edit_form.lastName) }}
+                {{ form_widget(edit_form.lastName) }}
             </div>
             <div>
-                <th>Фамилия</th>
-                <td>{{ entity.lastName }}</td>
+                {{ form_label (edit_form.email) }}
+                {{ form_errors(edit_form.email) }}
+                {{ form_widget(edit_form.email) }}
             </div>
             <div>
-                <th>Email</th>
-                <td>{{ entity.email }}</td>
+                {{ form_label (edit_form.tel) }}
+                {{ form_errors(edit_form.tel) }}
+                {{ form_widget(edit_form.tel) }}
             </div>
             <div>
-                <th>Телефон</th>
-                <td>{{ entity.tel }}</td>
+                {{ form_label (edit_form.mainCity) }}
+                {{ form_errors(edit_form.mainCity) }}
+                {{ form_widget(edit_form.mainCity) }}
             </div>
             <div>
-                <th>Регион</th>
-                <td>{{ entity.mainCity }}</td>
+                {{ form_label (edit_form.town) }}
+                {{ form_errors(edit_form.town) }}
+                {{ form_widget(edit_form.town) }}
             </div>
             <div>
-                <th>Город</th>
-                <td>{{ entity.town }}</td>
+                {{ form_label (edit_form.street) }}
+                {{ form_errors(edit_form.street) }}
+                {{ form_widget(edit_form.street) }}
             </div>
             <div>
-                <th>Улица</th>
-                <td>{{ entity.street }}</td>
+                {{ form_label (edit_form.houseNum) }}
+                {{ form_errors(edit_form.houseNum) }}
+                {{ form_widget(edit_form.houseNum) }}
             </div>
             <div>
-                <th>Дом №</th>
-                <td>{{ entity.houseNum }}</td>
+                {{ form_label (edit_form.blockNum) }}
+                {{ form_errors(edit_form.blockNum) }}
+                {{ form_widget(edit_form.blockNum) }}
             </div>
             <div>
-                <th>Корп.</th>
-                <td>{{ entity.blockNum }}</td>
+                {{ form_label (edit_form.buildNum) }}
+                {{ form_errors(edit_form.buildNum) }}
+                {{ form_widget(edit_form.buildNum) }}
             </div>
             <div>
-                <th>Стр.</th>
-                <td>{{ entity.buildNum }}</td>
+                {{ form_label (edit_form.porch) }}
+                {{ form_errors(edit_form.porch) }}
+                {{ form_widget(edit_form.porch) }}
             </div>
             <div>
-                <th>Подъезд</th>
-                <td>{{ entity.porch }}</td>
+                {{ form_label (edit_form.floor) }}
+                {{ form_errors(edit_form.floor) }}
+                {{ form_widget(edit_form.floor) }}
             </div>
             <div>
-                <th>Этаж</th>
-                <td>{{ entity.floor }}</td>
-            </div>
-            <div>
-                <th>Квартира</th>
-                <td>{{ entity.flat }}</td>
+                {{ form_label (edit_form.flat) }}
+                {{ form_errors(edit_form.flat) }}
+                {{ form_widget(edit_form.flat) }}
             </div>
 
+            
+                {{ form_widget(edit_form.submit, { 'attr': {'class': 'btn btn-success'} }) }}
+     
+		  	<a class="btn btn-default" role="button" href="{{ path('customer') }}">
+			   Назад к списку
+			</a>
 
-    {{ form_rest(edit_form) }}
-
-
-	<a class="btn btn-default" role="button" href="{{ path('customer') }}">
-	   Назад к списку
-	</a>
-	{# form(delete_form) #}
-	{{ form_label(delete_form) }}
-    {{ form_errors(delete_form) }} 
-    {{ form_widget(delete_form) }}
-
-
-	
+			{# form(delete_form) #}
+            {{ form_start(delete_form) }} 		   
+    		{{ form_widget(delete_form, { 'attr': {'class': 'btn btn-danger'} }) }}
+			{{ form_end(delete_form) }} 		
+	{{ form_end(edit_form) }} 
 {% endblock %}
