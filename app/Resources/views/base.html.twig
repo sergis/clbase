@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="{{ asset_url }}">
         {% endstylesheets %}
         {% endblock stylesheets%}
-        <script src="{{ asset('js/vendor/modernizr-2.6.2.min.js') }}"></script>
+        <script src="{{ asset('js/vendor/modernizr-2.6.2-respond-1.1.0.min.js') }}"></script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -53,7 +53,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="{{ path('ulb_clbase_browse_homepage') }}">Главная</a></li>
             <li><a href="#about">О нас</a></li>
-            <li><a href="#contact">Контакты</a></li>
+            <!--li><a href="#contact">Контакты</a></li-->
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Меню<b class="caret"></b></a>
               <ul class="dropdown-menu">
