@@ -4,7 +4,9 @@
 {% block body -%}
 <h1>База потенциальных Клиентов</h1>
 <div class="panel panel-default">
-    <div class="panel-heading">Список Клиентов</div>
+    <div class="panel-heading">
+        Клиенты: {{ customerOffset+1 }} &dash; {{ customerOffset+countPerPage }} ({{ countPerPage }}) из {{ totalCount }}
+    </div>
     <!--div class="panel-body">
   
     </div-->    
@@ -62,24 +64,33 @@
     </div>
     
     <div class="panel-footer">
-        <div class="btn btn-group nav nav-bar"> 
-        <ul class="pagination pagination-sm">
-          <li class="disabled"><a href="#">&laquo;</a></li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#">&raquo;</a></li>
+       
+            <a href="{{ path('customer_new') }}" class="btn btn-default btn-group" role="button">
+               Создать клиента
+            </a>
+        {% if totalPages>1 %}
+        <ul class="btn-group pagination pagination-sm">
+
+            <li {% if leftPage <=1 %}class="disabled"{% endif %}>
+                <a href="{{ path('customer', { 'page': 1 }) }}">&laquo;</a></li>
+            <li {% if leftPage <=1 %}class="disabled"{% endif %}><a href="#">&larr;</a></li>
+                
+            {% for pageN in leftPage..rightPage %}  
+                <li {% if pageN==currentPage %}class="active"{% endif %}><a href="#">{{ pageN }}</a></li>
+            {% endfor %}
+            
+            <li {% if rightPage >=totalPages %}class="disabled"{% endif %}><a href="#">&rarr;</a></li>
+            <li {% if rightPage >=totalPages %}class="disabled"{% endif %}>
+                <a href="{{ path('customer', { 'page': totalPages }) }}">&raquo;</a></li>
+                 
         </ul>  
+        {% endif %}
         <ul class="list-unstyled">
             <li>
-                <a href="{{ path('customer_new') }}" class="btn btn-default" role="button">
-                    Создать клиента
-                </a>
+
             </li>
         </ul>
-        </div>
+        
     </div>
 </div>
 {% endblock %}

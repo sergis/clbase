@@ -3,35 +3,119 @@
 	{
 		"selected_items":
 		[
+			[
+				"t",
+				"totalCount"
+			],
+			[
+				"to",
+				"totalPages"
+			],
+			[
+				"cu",
+				"currentPage"
+			],
+			[
+				"le",
+				"leftPage"
+			],
+			[
+				"l",
+				"leftPage"
+			],
+			[
+				"co",
+				"countPerPage"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"re",
+				"repository"
+			],
+			[
+				"coun",
+				"countQuery"
+			],
+			[
+				"c",
+				"customer"
+			],
+			[
+				"fl",
+				"floor"
+			],
+			[
+				"is_n",
+				"is_numeric"
+			],
+			[
+				"f",
+				"fun	function …"
+			],
+			[
+				"for",
+				"for	for …"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/edit.html.twig",
+			"file": "vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig",
 			"settings":
 			{
-				"buffer_size": 3232,
+				"buffer_size": 12840,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Resources/views/base.html.twig",
+			"settings":
+			{
+				"buffer_size": 5416,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/show.html.twig",
+			"file": "src/Ulb/Clbase/BrowseBundle/Controller/CustomerController.php",
 			"settings":
 			{
-				"buffer_size": 2353,
-				"line_ending": "Windows"
+				"buffer_size": 8959,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Ulb/Clbase/BrowseBundle/Resources/config/routing.yml",
+			"settings":
+			{
+				"buffer_size": 347,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/index.html.twig",
+			"settings":
+			{
+				"buffer_size": 3688,
+				"line_ending": "Unix"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"t",
+				"View: Toggle Open Files in Side Bar"
+			]
 		],
-		"width": 0.0
+		"width": 392.0
 	},
 	"console":
 	{
@@ -48,16 +132,50 @@
 	},
 	"file_history":
 	[
+		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Controller/DefaultController.php",
+		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Resources/views/Default/index.html.twig",
+		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/show.html.twig",
+		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Controller/CustomerController.php",
+		"/C/DataServers/clbase/app/Resources/views/base.html.twig",
+		"/C/DataServers/clbase/web/css/main.css",
+		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/index.html.twig",
+		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/new.html.twig",
+		"/C/Users/Serguei/.ssh/id_rsa.pub",
+		"/C/DataServers/clbase/BaseCSV/cl_base.sublime-project",
+		"/C/Users/Serguei/.ssh/rsa-key-finger.txt",
+		"/C/DataServers/clbase/BaseCSV/SqlQueries.sql",
+		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Resources/views/Form/fields.html.twig",
+		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/edit.html.twig",
+		"/C/Users/Serguei/AppData/Roaming/Sublime Text 2/Packages/User/JSON.sublime-settings",
+		"/C/DataServers/clbase/README.md",
+		"/C/DataServers/clbase/.gitignore",
+		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Resources/views/Form/field.html.twig",
+		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Form/CustomerType.php",
+		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Resources/config/routing.yml",
+		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Entity/Customer.php",
+		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Resources/views/base.html.twig",
+		"/C/OpenServer/clbase.bat",
+		"/C/DataServers/crbex/composer.json",
+		"/C/DataServers/clbase/BaseCSV/csv2010fields",
+		"/C/Users/Serguei/Documents/!Ulybkino/clbase13-12-18.sql",
+		"/C/DataServers/crbex/index.html",
+		"/C/DataServers/crbex/vhost.conf",
+		"/C/DataServers/clbase/BaseCSV/Orders 2010 to 31may.csv",
+		"/C/DataServers/MyServers.sublime-project",
+		"/C/Users/User/Desktop/ыыыы/Data/Packages/Emmet/Emmet.sublime-settings",
+		"/C/Users/User/Desktop/ыыыы/Data/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/User/Desktop/ss"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
 		"height": 0.0,
 		"where_history":
 		[
+			"C:\\DataServers\\clbase\\vendor\\symfony\\symfony"
 		]
 	},
 	"find_state":
@@ -65,6 +183,41 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"	    $",
+			"loop.index",
+			"firstPage",
+			"$firstPage",
+			"perPage",
+			"currentPage",
+			".flat",
+			"_row",
+			"rest",
+			"label ",
+			"widget",
+			"form_widget(edit_form",
+			" }}",
+			"{{ edit_form.",
+			"entity.",
+			"</td>",
+			"<td>",
+			"tr>",
+			".id",
+			"id",
+			"FirstName",
+			"customer",
+			"edit_form",
+			"{{ form.vars.name }}",
+			"widgets",
+			"p",
+			"li",
+			"View details",
+			"btn",
+			"'false'",
+			"'true'",
+			",)",
+			"Юлия",
+			"Артем ",
+			"check"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -82,61 +235,143 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/edit.html.twig",
+					"file": "vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form/form_div_layout.html.twig",
 					"settings":
 					{
-						"buffer_size": 3232,
+						"buffer_size": 12840,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3160,
-								3160
+								54,
+								54
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 990.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/show.html.twig",
+					"file": "app/Resources/views/base.html.twig",
 					"settings":
 					{
-						"buffer_size": 2353,
+						"buffer_size": 5416,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2232,
-								2232
+								449,
+								449
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/Ulb/Clbase/BrowseBundle/Controller/CustomerController.php",
+					"settings":
+					{
+						"buffer_size": 8959,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1551,
+								1551
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 900.0,
+						"translation.y": 476.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/Ulb/Clbase/BrowseBundle/Resources/config/routing.yml",
+					"settings":
+					{
+						"buffer_size": 347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								235,
+								235
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/index.html.twig",
+					"settings":
+					{
+						"buffer_size": 3688,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								297,
+								309
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -150,7 +385,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 31.0
 	},
 	"layout":
 	{
@@ -190,16 +425,16 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 292.0,
+	"side_bar_width": 244.0,
 	"status_bar_visible": true
 }

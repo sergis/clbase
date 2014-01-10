@@ -25,14 +25,69 @@ class CustomerController extends Controller
      * @Method("GET")
      * @Template()
      */
-    public function indexAction()
+    public function indexAction($page=1)
     {
+        if (!is_numeric($page) OR $page<1) {
+            $page=1;
+        }
+        else {
+            $page=floor($page);
+        }
+
+        $countPerPage=10;
+
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('UlbClbaseBrowseBundle:Customer')->findAll();
+        $repository = $em->getRepository('UlbClbaseBrowseBundle:Customer');
 
+/*        $countQuery=$repository->createQueryBuilder('c')
+                                ->select(count('c.id'))
+                                ->getQuery();  
+                                */
+        $countQuery=$em->createQueryBuilder()
+                        ->select('Count(c)')
+                        ->from('UlbClbaseBrowseBundle:Customer','c')
+                        ->getQuery();
+        $totalCount=$countQuery->getSingleScalarResult();
+        $totalPages=floor(1+($totalCount-1)/$countPerPage);
+        if ($totalPages<=1) {
+            $totalPages=1;
+            $countPerPage=$totalCount;
+        }
+        if ($page>$totalPages) {
+            $currentPage=$totalPages;
+        }
+        else $currentPage=$page;
+        $leftPage=$page-10/2;
+        if ($leftPage<1) {
+            $leftPage=1;
+        }
+        $rightPage=$leftPage+10;
+        if ($rightPage>$totalPages)
+        {
+            $rightPage=$totalPages;
+        }
+        $customerOffset=$countPerPage*($currentPage-1);
+        $customerQuery=$em->createQueryBuilder()
+                            ->select('c')
+                            ->from('UlbClbaseBrowseBundle:Customer','c')
+                            ->setFirstResult($customerOffset)
+                            ->setMaxResults($countPerPage)
+                            ->getQuery();
+
+    // ->orderBy('id','ASC')
+        $entities = $customerQuery->getArrayResult();
+        
         return array(
             'entities' => $entities,
+            'customerOffset' =>$customerOffset,
+            'countPerPage'=>$countPerPage,
+            'totalCount'=>$totalCount,
+            'totalPages'=>$totalPages,
+            'currentPage'=>$currentPage,
+            
+            'rightPage'=>$rightPage,
+            'leftPage'=>$leftPage,
         );
     }
     /**
@@ -46,13 +101,14 @@ class CustomerController extends Controller
     {
         $entity = new Customer();
         /* set default non-required values */
+        //$entity->setCity("none");
         $entity->setTown("none");
-        $entity->setHouseNum("");
-        $entity->setBlockNum("");
-        $entity->setBuildNum("");
-        $entity->setPorch("");
-        $entity->setFloor("");
-        $entity->setFlat("");
+        $entity->setHouseNum("none");
+        $entity->setBlockNum("none");
+        $entity->setBuildNum("none");
+        $entity->setPorch("none");
+        $entity->setFloor("none");
+        $entity->setFlat("none");
 
 
 
