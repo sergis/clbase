@@ -69,28 +69,35 @@
                Создать клиента
             </a>
         {% if totalPages>1 %}
-        <ul class="btn-group pagination pagination-sm">
-
-            <li {% if leftPage <=1 %}class="disabled"{% endif %}>
-                <a href="{{ path('customer', { 'page': 1 }) }}">&laquo;</a></li>
-            <li {% if leftPage <=1 %}class="disabled"{% endif %}><a href="#">&larr;</a></li>
+        {% set pagesRange = 10 %}
+            <ul class="btn-group pagination pagination-sm">
+                {%  set leftPage=currentPage-pagesRange/2 %}
+                {%  if (leftPage<1) %} 
+                    {%  set leftPage=1 %}
+                {% endif %}
+                {%  set rightPage=leftPage+pagesRange %}
+                {%  if (rightPage>totalPages) %}
+                    {% set rightPage=totalPages %}
+                {% endif %}
+                <li {% if leftPage <=1 %}class="disabled"{% endif %}>
+                    <a href="{{ path('customers_page', { 'page': 1 }) }}" title="Первая стр.">&laquo;</a>
+                </li>
+                <li {% if leftPage <=1 %}class="disabled"{% endif %}>
+                    <a href="{{ path('customers_page', { 'page': leftPage }) }}" title="меньше {{ leftPage }}">&lt;</a>
+                </li>
+                    
+                {% for pageN in leftPage..rightPage %}  
+                    <li {% if pageN==currentPage %}class="active"{% endif %}>
+                        <a href="{{ path('customers_page', { 'page': pageN }) }}" title="на стр.{{ pageN }}">{{ pageN }}</a></li>
+                {% endfor %}
                 
-            {% for pageN in leftPage..rightPage %}  
-                <li {% if pageN==currentPage %}class="active"{% endif %}><a href="#">{{ pageN }}</a></li>
-            {% endfor %}
-            
-            <li {% if rightPage >=totalPages %}class="disabled"{% endif %}><a href="#">&rarr;</a></li>
-            <li {% if rightPage >=totalPages %}class="disabled"{% endif %}>
-                <a href="{{ path('customer', { 'page': totalPages }) }}">&raquo;</a></li>
-                 
-        </ul>  
+                <li {% if rightPage >=totalPages %}class="disabled"{% endif %}><a href="{{ path('customers_page', { 'page': rightPage }) }}" title="больше {{ rightPage }}">&gt;</a></li>
+                <li {% if rightPage >=totalPages %}class="disabled"{% endif %}>
+                    <a href="{{ path('customers_page', { 'page': totalPages }) }}" title="последняя стр.{{ totalPages }}">&raquo;</a></li>
+                     
+            </ul>  
         {% endif %}
-        <ul class="list-unstyled">
-            <li>
 
-            </li>
-        </ul>
-        
     </div>
 </div>
 {% endblock %}

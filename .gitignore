@@ -13,3 +13,5 @@
 /src/Acme/
 /baseCSV/
 /composer.phar
+/.ht*
+/clbase.sublime*

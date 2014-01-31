@@ -22,6 +22,7 @@ class CustomerController extends Controller
      * Lists all Customer entities.
      *
      * @Route("/", name="customer")
+     * @Route("/page/{page}", name="customers_page")
      * @Method("GET")
      * @Template()
      */
@@ -34,7 +35,7 @@ class CustomerController extends Controller
             $page=floor($page);
         }
 
-        $countPerPage=10;
+        $countPerPage=2;
 
         $em = $this->getDoctrine()->getManager();
 
@@ -58,15 +59,7 @@ class CustomerController extends Controller
             $currentPage=$totalPages;
         }
         else $currentPage=$page;
-        $leftPage=$page-10/2;
-        if ($leftPage<1) {
-            $leftPage=1;
-        }
-        $rightPage=$leftPage+10;
-        if ($rightPage>$totalPages)
-        {
-            $rightPage=$totalPages;
-        }
+        //
         $customerOffset=$countPerPage*($currentPage-1);
         $customerQuery=$em->createQueryBuilder()
                             ->select('c')
@@ -86,8 +79,8 @@ class CustomerController extends Controller
             'totalPages'=>$totalPages,
             'currentPage'=>$currentPage,
             
-            'rightPage'=>$rightPage,
-            'leftPage'=>$leftPage,
+            // 'rightPage'=>$rightPage,
+            // 'leftPage'=>$leftPage,
         );
     }
     /**
