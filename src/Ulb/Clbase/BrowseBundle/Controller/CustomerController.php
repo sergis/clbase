@@ -61,6 +61,8 @@ class CustomerController extends Controller
         else $currentPage=$page;
         //
         $customerOffset=$countPerPage*($currentPage-1);
+        
+        if ($totalCount>0) {
         $customerQuery=$em->createQueryBuilder()
                             ->select('c')
                             ->from('UlbClbaseBrowseBundle:Customer','c')
@@ -70,7 +72,9 @@ class CustomerController extends Controller
 
     // ->orderBy('id','ASC')
         $entities = $customerQuery->getArrayResult();
-        
+        }
+        else
+            $entities = '';
         return array(
             'entities' => $entities,
             'customerOffset' =>$customerOffset,

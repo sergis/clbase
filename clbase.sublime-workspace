@@ -83,7 +83,7 @@
 			"file": "src/Ulb/Clbase/BrowseBundle/Controller/CustomerController.php",
 			"settings":
 			{
-				"buffer_size": 8959,
+				"buffer_size": 8811,
 				"line_ending": "Unix"
 			}
 		},
@@ -99,8 +99,60 @@
 			"file": "src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/index.html.twig",
 			"settings":
 			{
-				"buffer_size": 3688,
+				"buffer_size": 4420,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/new.html.twig",
+			"settings":
+			{
+				"buffer_size": 301,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/DataServers/UlbBranchPolicy.html",
+			"settings":
+			{
+				"buffer_size": 6700,
+				"line_ending": "Windows",
+				"name": "<h1> <span class=\"mw-headline\" id=\"Anaconda_Branch"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 267,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "\n# Symfony\n\nrm -rf app/cache/*\nrm -rf app/logs/*\n\nAPACHEUSER=`ps aux | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data' | grep -v root | head -1 | cut -d\\  -f1`\nsudo chmod +a \"$APACHEUSER allow delete,write,append,file_inherit,directory_inherit\" app/cache app/logs\nsudo chmod +a \"`whoami` allow delete,write,append,file_inherit,directory_inherit\" app/cache app/logs\n#  OR\nAPACHEUSER=`ps aux | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data' | grep -v root | head -1 | cut -d\\  -f1`\nsudo setfacl -R -m u:\"$APACHEUSER\":rwX -m u:`whoami`:rwX app/cache app/logs\nsudo setfacl -dR -m u:\"$APACHEUSER\":rwX -m u:`whoami`:rwX app/cache app/logs\n\n\n# set permissions for GIT working directories\n#\nusrmod -a -G git apache\n    \nsetfacl -dR -m u:apache:rX /srv/git/repositories\nsetfacl -dR -m u:apache:rX /srv/git/bin\nsetfacl -dR -m u:apache:rX /srv/git/.gitolite\n#  check\ngetfacl /srv/git/.gitolite/conf/gitolite.conf*\nsetfacl -R -m u:apache:rX /srv/git/.gitolite/conf/gitolite.conf*",
+			"file": "/C/Users/Serguei/Documents/!Ulybkino/Installations/Gitolite",
+			"file_size": 986,
+			"file_write_time": 130362442510401548,
+			"settings":
+			{
+				"buffer_size": 962,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Serguei/GitUlb/installdocs/Sf2/sf2setup",
+			"settings":
+			{
+				"buffer_size": 626,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Users/Serguei/GitUlb/installdocs/gitolite&web/Gitolite",
+			"settings":
+			{
+				"buffer_size": 382,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -132,6 +184,13 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Serguei/GitUlb/gitolite-admin/conf/gitolite.conf",
+		"/C/Users/Serguei/Documents/!Ulybkino/Pdocs/ReleasesWorkflow.md",
+		"/C/Users/Serguei/Documents/!Ulybkino/Installations/Gitolite",
+		"/C/Users/Serguei/.ssh/agent.env",
+		"/C/DataServers/clbase/README.md",
+		"/C/Users/Serguei/testing/README.txt",
+		"/C/Windows/System32/drivers/etc/hosts",
 		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Controller/DefaultController.php",
 		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Resources/views/Default/index.html.twig",
 		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/show.html.twig",
@@ -147,7 +206,6 @@
 		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Resources/views/Form/fields.html.twig",
 		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/edit.html.twig",
 		"/C/Users/Serguei/AppData/Roaming/Sublime Text 2/Packages/User/JSON.sublime-settings",
-		"/C/DataServers/clbase/README.md",
 		"/C/DataServers/clbase/.gitignore",
 		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Resources/views/Form/field.html.twig",
 		"/C/DataServers/clbase/src/Ulb/Clbase/BrowseBundle/Form/CustomerType.php",
@@ -183,6 +241,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"сайта",
+			"anaconda",
+			"Anaconda",
+			"customer_page",
+			"10",
 			"	    $",
 			"loop.index",
 			"firstPage",
@@ -235,7 +298,6 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
 				{
@@ -250,8 +312,8 @@
 						"selection":
 						[
 							[
-								54,
-								54
+								76,
+								76
 							]
 						],
 						"settings":
@@ -299,15 +361,15 @@
 					"file": "src/Ulb/Clbase/BrowseBundle/Controller/CustomerController.php",
 					"settings":
 					{
-						"buffer_size": 8959,
+						"buffer_size": 8811,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1551,
-								1551
+								672,
+								672
 							]
 						],
 						"settings":
@@ -317,7 +379,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 476.0,
+						"translation.y": 392.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -353,15 +415,15 @@
 					"file": "src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/index.html.twig",
 					"settings":
 					{
-						"buffer_size": 3688,
+						"buffer_size": 4420,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								297,
-								309
+								1870,
+								1870
 							]
 						],
 						"settings":
@@ -369,6 +431,163 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 42.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/Ulb/Clbase/BrowseBundle/Resources/views/Customer/new.html.twig",
+					"settings":
+					{
+						"buffer_size": 301,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/DataServers/UlbBranchPolicy.html",
+					"settings":
+					{
+						"buffer_size": 6700,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								847,
+								847
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<h1> <span class=\"mw-headline\" id=\"Anaconda_Branch",
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": ".gitignore",
+					"settings":
+					{
+						"buffer_size": 267,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								267,
+								267
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/C/Users/Serguei/Documents/!Ulybkino/Installations/Gitolite",
+					"settings":
+					{
+						"buffer_size": 962,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								701,
+								701
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/C/Users/Serguei/GitUlb/installdocs/Sf2/sf2setup",
+					"settings":
+					{
+						"buffer_size": 626,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								626,
+								626
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/C/Users/Serguei/GitUlb/installdocs/gitolite&web/Gitolite",
+					"settings":
+					{
+						"buffer_size": 382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								382,
+								382
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
